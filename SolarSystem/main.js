@@ -1,7 +1,9 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import gsap from "gsap";
 import "./style.css";
+
 
 //Instanciem el loader de models GLTF
 const loader = new GLTFLoader();
@@ -119,7 +121,7 @@ const moonMaterial = new THREE.MeshPhongMaterial({
   emissive: 0x222222,
 });
 const moon = new THREE.Mesh(sphereGeometry, moonMaterial);
-moon.scale.set(0.5, 0.5, 0.5);
+moon.scale.set(1, 1, 1);
 moonOrbit.add(moon);
 
 //objecte buid que contindrà la calavera i els seus satelits
